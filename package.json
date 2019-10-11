@@ -1,0 +1,36 @@
+{
+  "name": "crawlbot-server",
+  "version": "0.1.0",
+  "description": " A simple web interface for the web crawling library 'crawlbot'.",
+  "keywords": [
+    "crawl",
+    "scrape",
+    "webcrawl"
+  ],
+  "homepage": "https://github.com/sunnypurewal/crawlbot-server",
+  "bugs": {
+    "url": "https://github.com/sunnypurewal/crawlbot-server/issues",
+    "email": "sunnypurewal@gmail.com"
+  },
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sunny Purewal <sunnypurewal@gmail.com> (http://sunnypurewal.me)",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "github:sunnypurewal/crawlbot-server.git"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "crawlbot": "file:../crawlbot",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.1",
+    "@types/ejs": "^2.6.3",
+    "@types/express": "^4.17.1"
+  }
+}
