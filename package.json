@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "body-parser": "^1.19.0",
-    "crawlbot": "file:../crawlbot",
+    "crawlbot": "^0.1.2",
     "ejs": "^2.7.1",
     "express": "^4.17.1"
   },

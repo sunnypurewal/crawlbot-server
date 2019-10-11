@@ -47,7 +47,7 @@ class Server {
     else console.error("Implement crawlbot-server.onHTML(html,url) to receive the crawled web pages")
   }
 
-  onExit = (proc, code, signal) => {
+  _onExit = (domain, proc, code, signal) => {
     let index = -1
     for (let i = 0; i < this.forks.length; i++) {
       const fork = this.forks[i]
@@ -57,7 +57,7 @@ class Server {
       }
     }
     if (index !== -1) this.forks.splice(index, 1)
-    if (this.onExit) this.onExit(process, code, signal)
+    if (this.onExit) this.onExit(domain, proc, code, signal)
     console.log("Finished crawling ", domain.href || domain)
   }
 
@@ -98,7 +98,7 @@ class Server {
       res.status(428).send("Too many active crawlers")
       return
     }
-    const forkedProcess = crawlbot.crawl(domain, since, this._onHTML, this.onExit)
+    const forkedProcess = crawlbot.crawl(domain, since, this._onHTML, this._onExit)
     console.log("Crawling", domain.href || domain)
     this.forks.push({domain, process: forkedProcess})
     res.redirect("/")
