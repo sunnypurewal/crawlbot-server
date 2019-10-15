@@ -1,6 +1,6 @@
 # Crawlbot Server
 
-crawlbot-server is a web front-end for [crawlbot](https://npmjs.com/packages/crawlbot).
+crawlbot-server is a web front-end for [crawlbot](https://npmjs.com/package/crawlbot).
 
 ![Screenshot](https://i.imgur.com/BGv9Zeq.png "Crawlbot Server")
 
